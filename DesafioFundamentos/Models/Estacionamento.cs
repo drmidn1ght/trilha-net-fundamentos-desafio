@@ -91,6 +91,19 @@ string placa = Console.ReadLine()
                 Console.WriteLine("Os veículos estacionados são:");
                 // TODO: Realizar um laço de repetição, exibindo os veículos estacionados
                 // *IMPLEMENTE AQUI*
+                    if (veiculos.Any())
+    {
+        Console.WriteLine("Os veículos estacionados são:");
+        foreach (var veiculo in veiculos)
+        {
+            Console.WriteLine(veiculo);
+        }
+    }
+    else
+    {
+        Console.WriteLine("Não há veículos estacionados.");
+    }
+}
             }
             else
             {
