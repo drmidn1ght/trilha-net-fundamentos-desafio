@@ -25,7 +25,8 @@ string placa = Console.ReadLine()
                 {
                         Console.WriteLine("Placa inválida. Tente novamente.");
                 }
-            }            Console.WriteLine("Digite a placa do veículo para estacionar:");
+            }           
+             Console.WriteLine("Digite a placa do veículo para estacionar:");
         }
 
         public void RemoverVeiculo()
@@ -34,7 +35,31 @@ string placa = Console.ReadLine()
 
             // Pedir para o usuário digitar a placa e armazenar na variável placa
             // *IMPLEMENTE AQUI*
-            string placa = "";
+            string placa = Console.ReadLine();
+
+                if (veiculos.Any(x => x.ToUpper() == placa.ToUpper(
+                        {
+                                Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
+                            
+                        } 
+
+                        if (int.TryParse(Console.ReadLine(), out int horas) && horas > 0)
+                            {
+                                    decimal valorTotal = precoInicial+ (precoPorHora * horas);
+                                    veiculos.Remove(placa.ToUpper());
+                                    Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R${valorTotal}");
+                            }
+                                else
+                                    {
+                                            Console.WriteLine("Valor inválido para as horas. Operação cancelada.");
+                                    }
+                            }
+                        }
+                            else 
+                                {
+                                        Console.WriteLine("Desculpe, este veículo não está aqui. Verifique se digitou a placa corretamente.");
+                                }
+                )))
 
             // Verifica se o veículo existe
             if (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
